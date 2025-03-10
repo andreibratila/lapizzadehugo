@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { createContext, useContext, useState, ReactNode } from "react";
+import { ReactNode, createContext, useContext, useState } from 'react';
 
 interface ContextProps {
   isOpen: boolean;

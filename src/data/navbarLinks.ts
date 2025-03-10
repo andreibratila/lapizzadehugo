@@ -1,19 +1,18 @@
-
 export const navbarLinks = [
   {
-    link: "/",
-    name: "Inicio"
+    link: '/',
+    name: 'Inicio',
   },
   {
-    link: "/pizzas",
-    name: "Productos"
+    link: '/pizzas',
+    name: 'Productos',
   },
   {
-    link: "/contactanos",
-    name: "Contáctanos"
+    link: '/contactanos',
+    name: 'Contáctanos',
   },
   {
-    link: "/combos",
-    name: "Combos"
-  }
-]
+    link: '/combos',
+    name: 'Combos',
+  },
+];

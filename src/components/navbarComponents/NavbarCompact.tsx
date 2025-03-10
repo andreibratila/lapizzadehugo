@@ -1,9 +1,10 @@
-"use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+'use client';
 
-import { useNavbar } from "@/context/UI/UIProvider";
-import { navbarLinks } from "@/data/navbarLinks";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+import { useNavbar } from '@/context/UI/UIProvider';
+import { navbarLinks } from '@/data/navbarLinks';
 
 export const NavbarCompact = () => {
   const { isOpen, handleMenu } = useNavbar();
@@ -11,15 +12,15 @@ export const NavbarCompact = () => {
   return (
     <>
       {isOpen && (
-        <div className="lg:hidden   pt-10 xs:h-72 sm: h-72 md:h-40 container ">
-          <div className="font-medium  p-4 md:py-5 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white flex flex-col items-center place-content-center ">
+        <div className="sm: container h-72 pt-10 xs:h-72 md:h-40 lg:hidden">
+          <div className="mt-4 flex flex-col place-content-center items-center rounded-lg border border-gray-100 bg-gray-50 p-4 font-medium md:mt-0 md:flex-row md:space-x-8 md:border-0 md:bg-white md:py-5">
             {navbarLinks.map(({ link, name }, i) => (
               <div
                 key={i}
-                className={pathname === link ? "bg-slate-300 rounded" : ""}
+                className={pathname === link ? 'rounded bg-slate-300' : ''}
               >
                 <Link
-                  className="px-3 py-2 flex items-center text-xl  uppercase font-bold leading-snug text-webC underline hover:opacity-50 "
+                  className="flex items-center px-3 py-2 text-xl font-bold uppercase leading-snug text-webC underline hover:opacity-50"
                   href={link}
                   onClick={handleMenu}
                 >

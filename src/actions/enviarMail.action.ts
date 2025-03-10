@@ -1,13 +1,13 @@
-"use server";
+'use server';
 
-import { z } from "zod";
-import nodemailer from "nodemailer";
+import nodemailer from 'nodemailer';
+import { z } from 'zod';
 
-import { sendMessage } from "@/helpers";
-import { IFormState } from "@/interface/Mail";
+import { sendMessage } from '@/helpers';
+import { IFormState } from '@/interface/Mail';
 
-const EMAIL = process.env.EMAIL || "";
-const EMAIL_PASS = process.env.EMAIL_PASS || "";
+const EMAIL = process.env.EMAIL || '';
+const EMAIL_PASS = process.env.EMAIL_PASS || '';
 
 // const transporter = nodemailer.createTransport({
 //   host: "mail.privateemail.com",
@@ -20,8 +20,8 @@ const EMAIL_PASS = process.env.EMAIL_PASS || "";
 // });
 
 const transporter = nodemailer.createTransport({
-  service: "Gmail",
-  host: "smtp.gmail.com",
+  service: 'Gmail',
+  host: 'smtp.gmail.com',
   port: 587,
   secure: true, // gmail
   auth: {
@@ -48,7 +48,7 @@ export const enviarMail = async ({
         phone && `telefono:${phone},`
       } asunto: ${subject}, mensaje: ${message}`,
     };
-    console.log(EMAIL, EMAIL_PASS);
+    // console.log(EMAIL, EMAIL_PASS);
     await transporter.sendMail(mailOptions);
 
     return { sended: true };
@@ -56,11 +56,11 @@ export const enviarMail = async ({
     if (error instanceof z.ZodError) {
       // Convertir errores de Zod a un formato de mensaje útil
       throw new Error(
-        `Validation error: ${error.errors.map((e) => e.message).join(", ")}`
+        `Validation error: ${error.errors.map((e) => e.message).join(', ')}`,
       );
     } else {
       console.log(error);
-      throw new Error("Failed to send email due to an unexpected error.");
+      throw new Error('Failed to send email due to an unexpected error.');
     }
   }
 };

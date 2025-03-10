@@ -1,9 +1,7 @@
 export const ProductDiv = ({ children }: { children: React.ReactNode }) => {
   return (
-    // <div className="flex content-center">
-    <div className="container pt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 content-center">
+    <div className="container grid content-center gap-4 pt-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
       {children}
     </div>
-    // </div>
   );
 };

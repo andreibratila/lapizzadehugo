@@ -1,4 +1,4 @@
-import nodemailer from "nodemailer";
+import nodemailer from 'nodemailer';
 
 interface MailOptions {
   from: string;
@@ -7,7 +7,7 @@ interface MailOptions {
 }
 
 export const transporter = nodemailer.createTransport({
-  host: "mail.privateemail.com",
+  host: 'mail.privateemail.com',
   port: 465,
   secure: true, // true for 465, false for other ports
   auth: {

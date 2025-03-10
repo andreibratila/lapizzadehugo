@@ -1,20 +1,20 @@
-import "@/slick-slider/slick.min.css";
-import "@/slick-slider/slick-theme.min.css";
+import { opinionesClientes } from '@/data/opiniones';
+import '@/slick-slider/slick-theme.min.css';
+import '@/slick-slider/slick.min.css';
 
-import { opinionesClientes } from "@/data/opiniones";
-import { SliderCSR } from "../";
-import { ClientOpinion } from "./components";
+import { SliderCSR } from '../';
+import { ClientOpinion } from './components';
 
 export const LandingSection3 = () => {
   return (
-    <section className="pt-20 bg-webC mt-14 pb-24">
+    <section className="mt-14 bg-webC pb-24 pt-20">
       <h1
-        className={`text-center font-garamond text-white decoration-white lg:pb-14 md:pb-14 sm:pb-10 pb-7 lg:text-6xl md:text-5xl sm:text-4xl text-xl  underline decoration-2 underline-offset-8 `}
+        className={`pb-7 text-center font-garamond text-xl text-white underline decoration-white decoration-2 underline-offset-8 sm:pb-10 sm:text-4xl md:pb-14 md:text-5xl lg:pb-14 lg:text-6xl`}
       >
         RESEÑAS SOBRE NOSOTROS
       </h1>
 
-      <div className="container rounded-3xl outline-dashed -outline-offset-8 bg-white">
+      <div className="container rounded-3xl bg-white outline-dashed -outline-offset-8">
         <SliderCSR>
           {opinionesClientes.map((opinionesClientes, i) => (
             <ClientOpinion key={i} {...opinionesClientes} />

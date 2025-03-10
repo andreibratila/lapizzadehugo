@@ -36,6 +36,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@domchristie/tailwind-utopia")],
 };
 export default config;

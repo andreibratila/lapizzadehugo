@@ -1,4 +1,4 @@
-import { NavProductos } from "@/components";
+import { NavProductos } from '@/components';
 
 export default function RootLayout({
   children,

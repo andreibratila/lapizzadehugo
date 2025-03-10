@@ -1,19 +1,19 @@
-import { FC } from "react";
+import { FC } from 'react';
 
 import {
   NavbarButton,
   NavbarCompact,
   NavbarFull,
   NavbarLogo,
-} from "@/components/navbarComponents";
-import { NavbarProvider } from "@/context/UI/UIProvider";
+} from '@/components/navbarComponents';
+import { NavbarProvider } from '@/context/UI/UIProvider';
 
 export const NavBar: FC = () => {
   return (
-    <nav className="z-10 fixed w-full flex justify-between lg:px-20 md:px-20 sm:px-7 px-4 py-5 bg-webC">
+    <nav className="fixed z-10 flex w-full justify-between bg-webC px-4 py-5 sm:px-7 md:px-20 lg:px-20">
       <NavbarProvider>
-        <div className="flex flex-col w-full">
-          <div className="flex xs:justify-center space-x-20 justify-between">
+        <div className="flex w-full flex-col">
+          <div className="flex justify-between space-x-20 xs:justify-center">
             <NavbarLogo />
             <NavbarButton />
           </div>
