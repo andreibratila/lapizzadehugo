@@ -1,4 +1,6 @@
-export const ensaladasData = [
+import type { ProductI } from '../interface';
+
+export const ensaladasData: ProductI[] = [
   {
     name: 'César',
     path: '/img/productos/ensaladas/Ensalada-cesar.jpg',

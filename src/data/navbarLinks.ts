@@ -4,7 +4,7 @@ export const navbarLinks = [
     name: 'Inicio',
   },
   {
-    link: '/pizzas',
+    link: '/productos/pizzas',
     name: 'Productos',
   },
   {
@@ -12,7 +12,7 @@ export const navbarLinks = [
     name: 'Contáctanos',
   },
   {
-    link: '/combos',
+    link: '/productos/combos',
     name: 'Combos',
   },
 ];

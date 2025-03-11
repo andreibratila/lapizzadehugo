@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next';
 
+import { URL_WEB } from '@/config';
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
@@ -7,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       disallow: '/img/',
       crawlDelay: 10,
     },
-    sitemap: 'https://lapizzadehugo.es/sitemap.xml',
+    sitemap: `${URL_WEB}/sitemap.xml`,
   };
 }

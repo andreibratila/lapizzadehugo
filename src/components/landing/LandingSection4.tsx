@@ -1,9 +1,7 @@
-import { FC } from 'react';
-
 import { ContactaConNosotros } from '@/components';
 import { IframeMaps } from '@/components/landing/components';
 
-export const LandingSection4: FC = () => {
+export const LandingSection4 = () => {
   return (
     <section className="bg-bgcontact py-10 sm:py-10 md:pt-10 lg:p-16">
       <div className="container bg-white lg:pb-16 lg:pt-16">

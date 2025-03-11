@@ -1,4 +1,6 @@
-export const empanadillasData = [
+import type { ProductI } from '../interface';
+
+export const empanadillasData: ProductI[] = [
   {
     name: 'Jamón y Queso',
     path: '/img/productos/empanadillas/Empanadilla-jamon-y-queso.jpg',

@@ -1,4 +1,6 @@
-export const combosData = [
+import type { ProductI } from '../interface';
+
+export const combosData: ProductI[] = [
   {
     name: 'Combo 1',
     path: '/img/productos/combos/Combo-1.jpg',

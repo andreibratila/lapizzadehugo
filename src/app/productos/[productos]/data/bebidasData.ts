@@ -1,4 +1,6 @@
-export const bebidasData = [
+import type { ProductI } from '../interface';
+
+export const bebidasData: ProductI[] = [
   {
     name: 'Coca-Cola',
     price: 'Local: 2,00€ / Domicilio: 1,80€',

@@ -1,4 +1,6 @@
-export const postresData = [
+import type { ProductI } from '../interface';
+
+export const postresData: ProductI[] = [
   {
     name: 'Tarrinas Häagen-Dazs',
     path: '/img/productos/postres/Postre-helado-haggen-dazs.jpg',

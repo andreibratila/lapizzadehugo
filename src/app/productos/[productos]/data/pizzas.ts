@@ -1,4 +1,6 @@
-export const pizzaData = [
+import type { ProductWithTitleI } from '../interface';
+
+export const pizzaData: ProductWithTitleI[] = [
   {
     title: 'Pizzas Clásicas - Mediana: 9,95€ / Familiar: 17,45€',
     pizzas: [

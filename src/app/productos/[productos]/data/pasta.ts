@@ -1,4 +1,6 @@
-export const pastaData = [
+import type { ProductI } from '../interface';
+
+export const pastaData: ProductI[] = [
   {
     name: 'Macarrones Boloñesa',
     path: '/img/productos/pasta/Pasta-macarrones.jpg',

@@ -1,35 +1,19 @@
-import Image from 'next/image';
+import type { IconType } from 'react-icons';
 
 import { contactLandingSection4 } from '@/data/contactLandingSection4';
-import { Horario, Instagram, Map, Telefono } from '@/data/svg';
 
 export const ContactaConNosotros = () => {
-  const getImageBySrc = (src: string) => {
-    switch (src) {
-      case 'Map':
-        return Map;
-      case 'Instagram':
-        return Instagram;
-      case 'Telefono':
-        return Telefono;
-      case 'Horario':
-        return Horario;
-      default:
-        return null;
-    }
-  };
-
-  const renderParagraphs = (src: string, text: string) => {
+  const renderParagraphs = (Icon: IconType, text: string, alt: string) => {
     const lines: string[] = text.split('\n');
     return lines.map((line: string, index: number) => (
       <p className="lg:pl-8" key={index}>
-        {renderContent(src, line)}
+        {renderContent(alt, line)}
       </p>
     ));
   };
 
-  const renderContent = (src: string, content: string) => {
-    if (src === 'Instagram') {
+  const renderContent = (alt: string, content: string) => {
+    if (alt === 'Instagram') {
       return (
         <a
           href="https://www.instagram.com/lapizzadehugo/"
@@ -52,19 +36,14 @@ export const ContactaConNosotros = () => {
         La pizza de Hugo
       </h2>
       <div className="xs:divide-y sm:divide-y md:grid md:grid-cols-4 md:divide-x lg:divide-y">
-        {contactLandingSection4.map(({ src, alt, p }) => (
+        {contactLandingSection4.map(({ Icon, alt, p }) => (
           <div
-            key={src}
+            key={alt}
             className="flex place-items-center xs:py-4 sm:py-4 md:flex md:flex-col md:place-content-center md:items-center md:justify-center md:px-2 lg:py-4"
           >
-            <Image
-              className="xs:pr-2 sm:pr-2 md:pb-5"
-              width={35}
-              height={35}
-              src={getImageBySrc(src)}
-              alt={alt}
-            />
-            <div>{renderParagraphs(src, p)}</div>
+            <Icon size={35} className="xs:pr-2 sm:pr-2 md:pb-5" />
+
+            <div>{renderParagraphs(Icon, p, alt)}</div>
           </div>
         ))}
       </div>

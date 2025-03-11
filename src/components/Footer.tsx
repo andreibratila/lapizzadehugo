@@ -1,10 +1,11 @@
+import { FaCircle } from 'react-icons/fa';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { footerLinks } from '@/data/footerLinks';
-import { Point } from '@/data/svg';
 
-export const Footer: React.FC = () => {
+export const Footer = () => {
   return (
     <>
       <nav className="bg-webC py-14">
@@ -20,13 +21,7 @@ export const Footer: React.FC = () => {
             {footerLinks.map(({ name, link }, i) => (
               <Link className="hover:text-gray-400" href={link} key={i}>
                 <p className="flex items-center">
-                  <Image
-                    width={10}
-                    height={10}
-                    src={Point}
-                    alt=""
-                    className="mr-2 fill-white md:hidden lg:hidden"
-                  />
+                  <FaCircle className="mr-2 text-white md:hidden lg:hidden" />
                   {name}
                 </p>
               </Link>

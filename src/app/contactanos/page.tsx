@@ -2,19 +2,17 @@ import { Metadata } from 'next';
 
 import { ContactaConNosotros, ReactForm } from '@/components';
 import { IframeMaps } from '@/components/landing/components';
-import { URL_WEB } from '@/config/envVariables';
 
 export const metadata: Metadata = {
   title: 'Contactanos',
   description: `Conéctate con 'La Pizza de Hugo' y déjanos saber tus inquietudes, sugerencias o comentarios. Estamos ubicados en Sant Pere i Sant Pau, Tarragona, y te esperamos con los brazos abiertos para ofrecerte la mejor experiencia culinaria. Ya sea que desees visitarnos en nuestro horario de atención o prefieras contactarnos por correo o teléfono, estamos aquí para atenderte.`,
   category: 'Restauración y Gastronomía',
   classification: 'Pizzería y Comida Italiana',
-  metadataBase: new URL(`https://${URL_WEB}`),
 
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    url: `https://${URL_WEB}/contactanos`,
+    url: '/contactanos',
     title: 'Contacta con La Pizza de Hugo',
     description: `Conéctate con 'La Pizza de Hugo' y déjanos saber tus inquietudes, sugerencias o comentarios. Estamos ubicados en Sant Pere i Sant Pau, Tarragona, y te esperamos con los brazos abiertos para ofrecerte la mejor experiencia culinaria. Ya sea que desees visitarnos en nuestro horario de atención o prefieras contactarnos por correo o teléfono, estamos aquí para atenderte.`,
     images: [
