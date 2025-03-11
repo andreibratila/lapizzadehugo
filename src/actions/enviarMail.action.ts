@@ -9,16 +9,6 @@ import { IFormState } from '@/interface/Mail';
 const EMAIL = process.env.EMAIL || '';
 const EMAIL_PASS = process.env.EMAIL_PASS || '';
 
-// const transporter = nodemailer.createTransport({
-//   host: "mail.privateemail.com",
-//   port: 465,
-//   secure: true, // true for 465, false for other ports
-//   auth: {
-//     user: EMAIL,
-//     pass: EMAIL_PASS,
-//   },
-// });
-
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
   host: 'smtp.gmail.com',
