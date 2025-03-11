@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { footerLinks } from '@/data/footerLinks';
 
 export const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
     <>
       <nav className="bg-webC py-14">
@@ -31,7 +33,7 @@ export const Footer = () => {
       </nav>
       <div className="w-full bg-black p-5 text-center">
         <p className="text-white">
-          La Pizza de Hugo S.L © Diseño y Desarrollo{' '}
+          Copyright © {year} La Pizza de Hugo S.L | Diseño y Desarrollo{' '}
           <a href="https://andreiflorianbratila.dev">
             <span className="text-yellow-200">andreiflorianbratila.dev</span>
           </a>
