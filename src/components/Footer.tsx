@@ -29,11 +29,11 @@ export const Footer = () => {
           </div>
         </div>
       </nav>
-      <div className="bg-black p-5">
+      <div className="w-full bg-black p-5 text-center">
         <p className="text-white">
           La Pizza de Hugo S.L © Diseño y Desarrollo{' '}
-          <a href="https://www.linkedin.com/in/andrei-florian-bratila/">
-            <span className="text-yellow-200">Andrei Bratila</span>
+          <a href="https://andreiflorianbratila.dev">
+            <span className="text-yellow-200">andreiflorianbratila.dev</span>
           </a>
         </p>
       </div>
