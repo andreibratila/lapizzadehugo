@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     template: '%s | La Pizza de Hugo',
     default: 'La Pizza de Hugo',
   },
+  creator: 'Andrei Florian Bratila',
+  authors: [
+    {
+      name: 'Andrei Florian Bratila',
+      url: 'andreiflorianbratila.dev',
+    },
+  ],
   description: `Descubre 'La Pizza de Hugo', una experiencia culinaria que combina calidad, pasión y elegancia. Desde 1996, ofrecemos productos naturales y artesanales sin conservantes. Comenzando como 'La Cuina de Hugo', hemos evolucionado para brindarte lo mejor en pizzas, empanadillas y más. Visítanos en Tarragona o realiza tu pedido a domicilio`,
   category: 'Restauración y Gastronomía',
   classification: 'Pizzería y Comida Italiana',
